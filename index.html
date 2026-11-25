@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <link rel="icon" type="image/png" href="images/gangamala-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="vendor/fontawesome/css/all.min.css"
+    />
+
+    <title>Gangamala Polyclinic Pvt. Ltd. | Specialist OPD, Skin Care & Diagnostics in Surkhet</title>
+    <meta
+      name="description"
+      content="Gangamala Polyclinic Pvt. Ltd. on Jumla Road, Birendranagar-6, Surkhet. Daily specialist OPD in Gynecology, Orthopedics, Dermatology & Skin Care, monthly Shahid Gangalal Senior Cardiology Clinic, USG, ECG, X-Ray, Lab, Pharmacy & Minor OT."
+    />
+
+    <link rel="stylesheet" href="css/styles.css?v=3" />
+    <script>
+      (function () {
+        var t = localStorage.getItem('gm_theme');
+        if (t === 'dark' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.classList.add('theme-dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <img src="images/gangamala-logo.png" alt="Gangamala Polyclinic" style="width: 74px; height: 74px; border-radius: 50%; margin-bottom: 14px; box-shadow: 0 8px 24px rgba(30, 58, 138, 0.28);" />
+      <div class="preloader-spinner"></div>
+    </div>
+    <script>
+      (function () {
+        function dismiss() {
+          var p = document.getElementById('preloader');
+          if (p) {
+            p.style.opacity = '0';
+            p.style.pointerEvents = 'none';
+            p.style.visibility = 'hidden';
+            document.body.classList.add('loaded');
+            setTimeout(function () {
+              if (p && p.parentNode) p.style.display = 'none';
+            }, 400);
+          }
+        }
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+          setTimeout(dismiss, 100);
+        } else {
+          document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(dismiss, 150);
+          });
+          window.addEventListener('load', dismiss);
+        }
+        setTimeout(dismiss, 800);
+      })();
+    </script>
+
+    <!-- Top Bar -->
+    <div class="top-hospital-bar">
+      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap">
+        <span>
+          <i class="fas fa-map-marker-alt" style="color: var(--primary-cyan); margin-right: 5px"></i>
+          Jumla Road, Birendranagar-6, Surkhet · Karnali Province
+        </span>
+        <span>
+          <i class="fas fa-clock" style="color: var(--primary-cyan); margin-right: 5px"></i>
+          Daily Specialist OPD · Lab, USG, ECG & X-Ray
+        </span>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap">
+        <a href="#cardiologyCamp" class="top-bar-emergency" style="text-decoration: none;">
+          <i class="fas fa-heart-pulse"></i> 3rd Sat Senior Cardiologist
+        </a>
+        <a href="tel:+97783520611">
+          <i class="fas fa-phone-alt" style="color: var(--primary-cyan); margin-right: 4px"></i>
+          Reception: 083-520611
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header id="mainHeader">
+      <a href="index.html" class="logo" aria-label="Gangamala Polyclinic Pvt. Ltd.">
+        <img src="images/gangamala-logo.png" alt="Gangamala Polyclinic Logo" class="brand-logo-img" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active" data-i18n="home">Home</a></li>
+        <li><a href="about.html" data-i18n="about">About</a></li>
+        <li><a href="services.html" data-i18n="services">Services</a></li>
+        <li><a href="doctors.html" data-i18n="doctors">Doctors</a></li>
+        <li><a href="patient-stories.html" data-i18n="patient_stories">Patient Stories</a></li>
+        <li><a href="blog.html" data-i18n="blog">Health Blog</a></li>
+        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="tel:+97783520611" class="header-icon" title="Call Reception 083-520611">
+          <i class="fas fa-phone-volume"></i>
+        </a>
+
+        <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="lang-dropdown">
+          <button class="lang-toggle" onclick="toggleLangDropdown(event)">
+            <i class="fas fa-globe"></i>
+            <span class="lang-label">EN</span>
+            <i class="fas fa-chevron-down lang-chevron"></i>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" class="lang-option active" data-lang="en" onclick="switchLang('en', event)">
+              <span class="lang-flag">🇳🇵</span> English
+            </a>
+            <a href="#" class="lang-option" data-lang="ne" onclick="switchLang('ne', event)">
+              <span class="lang-flag">🇳🇵</span> नेपाली
+            </a>
+          </div>
+        </div>
+
+        <a href="appointment.html" class="btn-appointment">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span data-i18n="book_consultation">Book OPD</span>
+        </a>
+        <i class="fas fa-bars btn-menu-mobile" onclick="toggleMobileNav()"></i>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer & Backdrop -->
+    <div class="mobile-drawer-scrim" id="mobileScrim" onclick="toggleMobileNav(false)"></div>
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <div>
+        <div class="mobile-drawer-header">
+          <a href="index.html" class="logo" aria-label="Gangamala Polyclinic Pvt. Ltd.">
+            <img src="images/gangamala-logo.png" alt="Gangamala Polyclinic Logo" class="brand-logo-img" />
+          </a>
+          <button class="mobile-drawer-close" onclick="toggleMobileNav(false)" aria-label="Close Navigation Menu">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="mobile-settings-bar">
+          <div class="mobile-lang-switcher">
+            <button class="mobile-lang-btn active" data-lang="en" onclick="switchLang('en', event)">
+              <span class="flag">🇳🇵</span> English
+            </button>
+            <button class="mobile-lang-btn" data-lang="ne" onclick="switchLang('ne', event)">
+              <span class="flag">🇳🇵</span> नेपाली
+            </button>
+          </div>
+          <button class="theme-toggle-btn mobile-theme-btn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="nav-link-item active" data-i18n="home"><i class="fas fa-house"></i> Home</a></li>
+          <li><a href="about.html" class="nav-link-item" data-i18n="about_hospital"><i class="fas fa-hospital-user"></i> About Polyclinic</a></li>
+          <li><a href="services.html" class="nav-link-item" data-i18n="clinical_services"><i class="fas fa-stethoscope"></i> Specialties & Services</a></li>
+          <li><a href="doctors.html" class="nav-link-item" data-i18n="doctors_opd"><i class="fas fa-user-md"></i> Specialist Doctors</a></li>
+          <li><a href="patient-stories.html" class="nav-link-item" data-i18n="patient_stories"><i class="fas fa-heart-pulse"></i> Patient Stories</a></li>
+          <li><a href="blog.html" class="nav-link-item" data-i18n="blog"><i class="fas fa-newspaper"></i> Health Blog</a></li>
+          <li><a href="contact.html" class="nav-link-item" data-i18n="contact_location"><i class="fas fa-map-location-dot"></i> Contact & Location</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-drawer-footer">
+        <a href="appointment.html" class="btn-appointment" style="width: 100%; justify-content: center; margin-bottom: 8px;">
+          <i class="fa-regular fa-calendar-check"></i> Book OPD / Heart Clinic
+        </a>
+        <a href="tel:+97783520611" class="mobile-call-btn">
+          <i class="fas fa-phone-volume"></i> Reception: <strong>+977 83-520611</strong>
+        </a>
+        <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" class="mobile-whatsapp-btn" style="background: #1877f2;">
+          <i class="fab fa-facebook-f"></i> Follow on Facebook
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content fade-left">
+        <div class="hero-badge-tag">
+          <i class="fas fa-shield-heart"></i> Multi-Specialty Polyclinic & Skin Care · Est. 2073 B.S.
+        </div>
+        <h1>Specialized Medical Care, <br /><span>Right on Jumla Road, Surkhet.</span></h1>
+        <p>
+          Gangamala Polyclinic Pvt. Ltd. delivers daily specialist OPD in Gynecology, Orthopedics, and Dermatology, monthly Senior Cardiology clinics from Shahid Gangalal National Heart Centre, plus on-site USG, ECG, X-Ray, Haematology Lab, Pharmacy, and Minor OT.
+        </p>
+
+        <div class="cta-group">
+          <a href="#appointmentSection" class="btn-primary">Book OPD Consultation <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="tel:+97783520611" class="btn-watch"><i class="fas fa-phone-volume"></i> Call 083-520611</a>
+        </div>
+
+        <div class="contact-box" onclick="location.href = 'contact.html'">
+          <div class="avatar">
+            <img src="images/gangamala-logo.png" alt="Gangamala Emblem" style="width: 34px; height: 34px; border-radius: 50%;" />
+          </div>
+          <div class="contact-info">
+            <span>Reception & Token Desk · Birendranagar-6</span>
+            <a href="tel:+97783520611">+977 83-520611 · Jumla Road, Surkhet</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image fade-right">
+        <div class="bg-circle"></div>
+        <img
+          src="images/gangamala-hero.jpg"
+          alt="Specialist Consultation at Gangamala Polyclinic Surkhet"
+          class="main-img"
+        />
+
+        <div class="stats-card">
+          <div class="progress-circle">
+            <div class="progress-inner">5.0★</div>
+          </div>
+          <div class="stats-text">Daily Specialist OPD<br />& Full Diagnostics</div>
+          <div class="stats-arrow">
+            <i class="fas fa-arrow-right" style="color: var(--primary-cyan); margin-top: 6px"></i>
+          </div>
+        </div>
+
+        <div class="floating-heart" title="Monthly Shahid Gangalal Heart Clinic">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fast Access 4-Step Cards -->
+    <section
+      class="process-section"
+      style="
+        padding: clamp(50px, 6vw, 75px) clamp(16px, 6vw, 8%);
+        background: var(--bg-light);
+        border-bottom: 1px solid #dbeafe;
+      "
+    >
+      <div class="section-header center fade-up" style="margin-bottom: 35px">
+        <h4><i class="fas fa-stethoscope"></i> COMPLETE OUTPATIENT CARE IN SURKHET</h4>
+        <h2 data-i18n="immediate_triage">Daily Specialist OPD & Complete Diagnostics Under One Roof</h2>
+      </div>
+
+      <div class="process-wrapper">
+        <div class="process-step fade-up delay-1" onclick="location.href = 'doctors.html'" style="cursor: pointer">
+          <div class="process-icon-wrap">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h3 data-i18n="emergency_247">Daily Specialist OPD</h3>
+          <p>Gynecology, Orthopedics & Skin Care specialists available daily.</p>
+          <div style="color: var(--primary-cyan); font-weight: 700; font-size: 13px; margin-top: 8px;">
+            Meet Our Doctors →
+          </div>
+        </div>
+
+        <div class="process-step fade-up delay-2" onclick="location.href = '#cardiologyCamp'" style="cursor: pointer">
+          <div class="process-icon-wrap">
+            <i class="fas fa-heart-pulse"></i>
+          </div>
+          <h3 data-i18n="doctor_consultations">Visiting Heart Clinic</h3>
+          <p>Dr. Amrit Bogati (Shahid Gangalal) every 3rd Saturday B.S.</p>
+          <div style="color: var(--primary-cyan); font-weight: 700; font-size: 13px; margin-top: 8px;">
+            Reserve Heart Slot →
+          </div>
+        </div>
+
+        <div class="process-step fade-up delay-3" onclick="location.href = 'services.html'" style="cursor: pointer">
+          <div class="process-icon-wrap">
+            <i class="fas fa-microscope"></i>
+          </div>
+          <h3 data-i18n="pharmacy_labs">Lab, USG, ECG & X-Ray</h3>
+          <p>Senior Radiologist USG, automated Haematology Lab & Minor OT.</p>
+          <div style="color: var(--primary-cyan); font-weight: 700; font-size: 13px; margin-top: 8px;">
+            Explore Diagnostics →
+          </div>
+        </div>
+
+        <div class="process-step fade-up delay-4" onclick="location.href = 'contact.html'" style="cursor: pointer">
+          <div class="process-icon-wrap">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3 data-i18n="hospital_location">Jumla Road, Surkhet</h3>
+          <p>Birendranagar-6 · Call 083-520611 · In-house औषधी पसल.</p>
+          <div style="color: var(--primary-cyan); font-weight: 700; font-size: 13px; margin-top: 8px;">
+            Directions & Map →
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Monthly Cardiology Clinic Spotlight -->
+    <section class="cardiology-camp-section" id="cardiologyCamp">
+      <div class="cardiology-camp-banner fade-up">
+        <div>
+          <div class="camp-kicker">
+            <i class="fas fa-heart-pulse"></i> Monthly Visiting Super-Specialist Clinic
+          </div>
+          <h2>Senior Cardiologist from Shahid Gangalal Heart Centre — Right Here in Surkhet</h2>
+          <p>
+            Skip the long journey to Kathmandu for expert heart care. Senior Cardiologist <strong>Dr. Amrit Bogati</strong> visits Gangamala Polyclinic regularly every <strong>third Saturday of the Nepali (B.S.) month</strong> for comprehensive cardiac evaluations, hypertension care, and post-procedure follow-ups, supported by our daily 12-Lead ECG and blood lab.
+          </p>
+          <div class="camp-meta-pills">
+            <span><i class="fas fa-calendar-day"></i> Every 3rd Saturday (Nepali B.S.)</span>
+            <span><i class="fas fa-wave-square"></i> On-Site ECG & Lipid Profile</span>
+            <span><i class="fas fa-phone-alt"></i> Pre-Book: 083-520611</span>
+          </div>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="#appointmentSection" class="btn-primary" style="background: #0ea5e9; box-shadow: 0 10px 25px rgba(20, 184, 166, 0.35);">
+              Pre-Register Cardiology Slot <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="tel:+97783520611" class="btn-primary" style="background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28); box-shadow: none;">
+              <i class="fas fa-phone-volume"></i> Call 083-520611
+            </a>
+          </div>
+        </div>
+
+        <div class="camp-doctor-card">
+          <img src="images/dr-amrit-bogati.jpg" alt="Dr. Amrit Bogati, Senior Cardiologist" />
+          <div>
+            <h3>Dr. Amrit Bogati</h3>
+            <div class="camp-doc-cred">MBBS, MD (Cardiology) · NMC No: 7700</div>
+            <div class="camp-doc-inst">
+              Senior Cardiologist<br />
+              <strong>Shahid Gangalal National Heart Centre</strong>, Kathmandu
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section (Real Clinic Lab + Real Pharmacy Overlap) -->
+    <section class="about-section">
+      <div class="fade-left" style="flex: 1.1; width: 100%;">
+        <div class="about-image-overlap-frame">
+          <img src="images/gangamala-lab.jpg" alt="Gangamala Polyclinic Haematology and Pathology Laboratory in Surkhet" class="about-img-primary" />
+
+          <div class="about-experience-pill">
+            <i class="fas fa-award"></i>
+            <div>
+              <strong>EST. 2073 B.S.</strong>
+              <span>Jumla Road, Surkhet</span>
+            </div>
+          </div>
+
+          <div class="about-img-secondary-badge" title="In-House Pharmacy Counter (औषधी पसल) at Gangamala Polyclinic">
+            <img src="images/gangamala-pharmacy.jpg" alt="Gangamala Polyclinic Pharmacy Counter Surkhet" />
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content fade-right" style="flex: 1.2; width: 100%;">
+        <div class="section-header">
+          <h4><i class="fas fa-shield-heart"></i> ABOUT GANGAMALA POLYCLINIC</h4>
+          <h2>Serving Birendranagar & Karnali<br />With Specialist Precision</h2>
+        </div>
+        <p>
+          Registered in <strong>2073 B.S. (Reg. No. 159951)</strong> and centrally located on <strong>Jumla Road, Birendranagar-6, Surkhet</strong>, <strong>Gangamala Polyclinic Pvt. Ltd. (गंगामाला पोलिक्लिनिक प्रा. लि.)</strong> brings specialist consultations, skin care, and complete diagnostic facilities together under one accessible roof.
+        </p>
+
+        <p>
+          From daily Gynecology, Orthopedic, and Dermatology OPDs to Senior Radiologist Ultrasonography (USG), automated Haematology lab testing, ECG, X-Ray, sterile Dressing & Minor OT, and our stocked in-house pharmacy (औषधी पसल), every service is built around accurate diagnosis and patient comfort.
+        </p>
+
+        <ul class="features-grid">
+          <li><i class="fas fa-check"></i> Daily Specialist OPD Doctors</li>
+          <li><i class="fas fa-check"></i> Dedicated Skin Care & Dermatology Clinic</li>
+          <li><i class="fas fa-check"></i> Monthly Shahid Gangalal Cardiologist</li>
+          <li><i class="fas fa-check"></i> Senior Radiologist USG & X-Ray</li>
+          <li><i class="fas fa-check"></i> Automated Haematology & Pathology Lab</li>
+          <li><i class="fas fa-check"></i> In-House Pharmacy, ECG & Minor OT</li>
+        </ul>
+
+        <a href="about.html" class="btn-primary">
+          Learn More About Our Clinic <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+      <div class="stat-box fade-up delay-1">
+        <div class="stat-number-bg">2073</div>
+        <div class="stat-title">Established (B.S.)</div>
+        <div class="stat-subtitle">Trusted Across Karnali</div>
+      </div>
+      <div class="stat-box fade-up delay-2">
+        <div class="stat-number-bg">05+</div>
+        <div class="stat-title">Core Specialists</div>
+        <div class="stat-subtitle">Gyne, Ortho, Skin, Heart, USG</div>
+      </div>
+      <div class="stat-box fade-up delay-3">
+        <div class="stat-number-bg">5.0★</div>
+        <div class="stat-title">Patient Rating</div>
+        <div class="stat-subtitle">Service, Value & Cleanliness</div>
+      </div>
+      <div class="stat-box fade-up delay-4">
+        <div class="stat-number-bg">3rd</div>
+        <div class="stat-title">Saturday Heart Camp</div>
+        <div class="stat-subtitle">Every Nepali Month (B.S.)</div>
+      </div>
+    </section>
+
+    <!-- Clinical Specialties & Services Section -->
+    <section class="services-section">
+      <div class="section-header center fade-up">
+        <h4><i class="fas fa-stethoscope"></i> SPECIALTIES & SERVICES</h4>
+        <h2 data-i18n="services_title">Specialized Care & Diagnostic Services</h2>
+        <p style="color: var(--text-gray); font-size: 15px; margin-top: 8px">
+          Click any service card to explore clinical scope, treating specialist, on-site facilities, and book your visit.
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="service-card carousel-item active fade-up delay-1 clickable-card" onclick="openServiceModal(0)" title="Click to view details">
+            <i class="fas fa-person-pregnant service-watermark"></i>
+            <div class="service-icon-wrap"><i class="fas fa-person-pregnant"></i></div>
+            <h3>Gynecology & Women’s Health</h3>
+            <p>Daily specialist OPD by Dr. Kritika Thapa covering prenatal care, menstrual disorders, PCOS, fertility counseling, and menopause care.</p>
+            <div class="service-divider"></div>
+            <div class="service-footer"><span>View Details & Book</span></div>
+            <a href="javascript:void(0)" class="service-btn" aria-label="View Gynecology Details"><i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card carousel-item fade-up delay-2 clickable-card" onclick="openServiceModal(1)" title="Click to view details">
+            <i class="fas fa-bone service-watermark"></i>
+            <div class="service-icon-wrap"><i class="fas fa-bone"></i></div>
+            <h3>Orthopedics & Spine Care</h3>
+            <p>Daily OPD by Dr. Tejendra Saud for fractures, arthritis, knee & joint pain, sports ligament injuries, and spinal care with on-site X-Ray.</p>
+            <div class="service-divider"></div>
+            <div class="service-footer"><span>View Details & Book</span></div>
+            <a href="javascript:void(0)" class="service-btn" aria-label="View Orthopedics Details"><i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card carousel-item fade-up delay-3 clickable-card" onclick="openServiceModal(2)" title="Click to view details">
+            <i class="fas fa-hand-sparkles service-watermark"></i>
+            <div class="service-icon-wrap"><i class="fas fa-hand-sparkles"></i></div>
+            <h3>Dermatology & Skin Care Clinic</h3>
+            <p>Daily Skin Care & Venereology OPD by Dr. Susmita Pradhan treating acne, eczema, melasma, fungal infections, allergies, and hair fall.</p>
+            <div class="service-divider"></div>
+            <div class="service-footer"><span>View Details & Book</span></div>
+            <a href="javascript:void(0)" class="service-btn" aria-label="View Dermatology Details"><i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card carousel-item fade-up delay-1 clickable-card" onclick="openServiceModal(3)" title="Click to view details">
+            <i class="fas fa-heart-pulse service-watermark"></i>
+            <div class="service-icon-wrap"><i class="fas fa-heart-pulse"></i></div>
+            <h3>Senior Cardiology & ECG</h3>
+            <p>Regular 3rd Saturday B.S. Heart Clinic by Dr. Amrit Bogati (Shahid Gangalal National Heart Centre) plus daily 12-Lead ECG screening.</p>
+            <div class="service-divider"></div>
+            <div class="service-footer"><span>View Details & Book</span></div>
+            <a href="javascript:void(0)" class="service-btn" aria-label="View Cardiology Details"><i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card carousel-item fade-up delay-2 clickable-card" onclick="openServiceModal(4)" title="Click to view details">
+            <i class="fas fa-x-ray service-watermark"></i>
+            <div class="service-icon-wrap"><i class="fas fa-x-ray"></i></div>
+            <h3>USG (Ultrasound) & X-Ray</h3>
+            <p>High-accuracy abdominal, obstetric, and pelvic Ultrasonography by Senior Radiologist Dr. D.B. Gurung alongside prompt X-Ray imaging.</p>
+            <div class="service-divider"></div>
+            <div class="service-footer"><span>View Details & Book</span></div>
+            <a href="javascript:void(0)" class="service-btn" aria-label="View USG and X-Ray Details"><i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card carousel-item fade-up delay-3 clickable-card" onclick="openServiceModal(5)" title="Click to view details">
+            <i class="fas fa-flask-vial service-watermark"></i>
+            <div class="service-icon-wrap"><i class="fas fa-flask-vial"></i></div>
+            <h3>Pathology Lab, Pharmacy & Minor OT</h3>
+            <p>Well-equipped Haematology & Biochemistry laboratory, genuine in-house pharmacy (औषधी पसल), sterile wound dressing, and Minor OT.</p>
+            <div class="service-divider"></div>
+            <div class="service-footer"><span>View Details & Book</span></div>
+            <a href="javascript:void(0)" class="service-btn" aria-label="View Lab and Minor OT Details"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 35px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;" class="fade-up">
+        <a href="appointment.html" class="btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Consultation Online</a>
+        <a href="services.html" class="btn-primary" style="background: var(--bg-light); color: var(--primary-dark); border: 1px solid #dbeafe; box-shadow: none;">Explore All Services & Packages <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Specialist Doctors Showcase -->
+    <section class="team-section">
+      <div class="section-header center fade-up">
+        <h4><i class="fas fa-user-md"></i> OUR SPECIALIST TEAM</h4>
+        <h2>Meet Our Dedicated Doctors & Visiting Specialists</h2>
+        <p style="color: var(--text-gray); font-size: 15px; margin-top: 8px">
+          Qualified specialists serving Surkhet with daily OPD clinics, diagnostic radiology, and monthly tertiary cardiac care.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card fade-up delay-1">
+          <div class="team-img-container">
+            <img src="images/dr-kritika-thapa.jpg" alt="Dr. Kritika Thapa - Gynecologist" />
+            <div class="team-social-pill">
+              <a href="tel:+97783520611" title="Call Reception"><i class="fas fa-phone-alt"></i></a>
+              <a href="#appointmentSection" title="Book Slot"><i class="fas fa-calendar-check"></i></a>
+            </div>
+          </div>
+          <span class="team-dept-badge">Gynecologist</span>
+          <h3>Dr. Kritika Thapa</h3>
+          <div class="team-subtext">MD (Teaching Hospital) · Women’s Health</div>
+          <div class="team-schedule-box">
+            <strong>Daily Specialist OPD:</strong><br />
+            Prenatal, Fertility & Menstrual Care<br />
+            Walk-In & Token Booking Available
+          </div>
+        </div>
+
+        <div class="team-card active fade-up delay-2">
+          <div class="team-img-container">
+            <img src="images/dr-tejendra-saud.jpg" alt="Dr. Tejendra Saud - Orthopedician" />
+            <div class="team-social-pill">
+              <a href="tel:+97783520611" title="Call Reception"><i class="fas fa-phone-alt"></i></a>
+              <a href="#appointmentSection" title="Book Slot"><i class="fas fa-calendar-check"></i></a>
+            </div>
+          </div>
+          <span class="team-dept-badge">Orthopedician</span>
+          <h3>Dr. Tejendra Saud</h3>
+          <div class="team-subtext">MS Orthopedics · Bone, Joint & Spine</div>
+          <div class="team-schedule-box">
+            <strong>Daily Specialist OPD:</strong><br />
+            Fractures, Joint Pain & Spine Care<br />
+            Backed by On-Site X-Ray & Minor OT
+          </div>
+        </div>
+
+        <div class="team-card fade-up delay-3">
+          <div class="team-img-container">
+            <img src="images/dr-susmita-pradhan.jpg" alt="Dr. Susmita Pradhan - Dermatologist" />
+            <div class="team-social-pill">
+              <a href="tel:+97783520611" title="Call Reception"><i class="fas fa-phone-alt"></i></a>
+              <a href="#appointmentSection" title="Book Slot"><i class="fas fa-calendar-check"></i></a>
+            </div>
+          </div>
+          <span class="team-dept-badge">Dermatologist</span>
+          <h3>Dr. Susmita Pradhan</h3>
+          <div class="team-subtext">MD Dermatology & Venereology</div>
+          <div class="team-schedule-box">
+            <strong>Daily Skin Care Clinic:</strong><br />
+            Acne, Eczema, Fungal & Hair Care<br />
+            Clinical Dermatology & Allergies
+          </div>
+        </div>
+
+        <div class="team-card fade-up delay-4">
+          <div class="team-img-container">
+            <img src="images/dr-amrit-bogati.jpg" alt="Dr. Amrit Bogati - Senior Cardiologist" />
+            <div class="team-social-pill">
+              <a href="tel:+97783520611" title="Call Reception"><i class="fas fa-phone-alt"></i></a>
+              <a href="#appointmentSection" title="Pre-Book Heart Camp"><i class="fas fa-calendar-check"></i></a>
+            </div>
+          </div>
+          <span class="team-dept-badge">Senior Cardiologist</span>
+          <h3>Dr. Amrit Bogati</h3>
+          <div class="team-subtext">MBBS, MD · Shahid Gangalal Heart Centre</div>
+          <div class="team-schedule-box">
+            <strong>Monthly Visiting Clinic:</strong><br />
+            Every 3rd Saturday of Nepali Month (B.S.)<br />
+            NMC No: 7700 · Pre-Booking Open
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 35px; text-align: center;" class="fade-up">
+        <a href="doctors.html" class="btn-primary">View All 5 Specialists (Including Senior Radiologist Dr. D.B. Gurung) <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Inside Gangamala Polyclinic: Real Clinic Photos Showcase -->
+    <section class="facility-gallery-section">
+      <div class="section-header center fade-up">
+        <h4><i class="fas fa-camera"></i> INSIDE OUR FACILITY</h4>
+        <h2>Real Glimpses of Gangamala Polyclinic, Jumla Road</h2>
+        <p style="color: var(--text-gray); font-size: 15px; margin-top: 8px">
+          Clean clinical spaces, automated haematology equipment, and our stocked in-house pharmacy serving Surkhet every day.
+        </p>
+      </div>
+
+      <div class="facility-gallery-grid">
+        <div class="facility-photo-card fade-up delay-1">
+          <div class="facility-photo-wrap">
+            <span class="facility-photo-badge"><i class="fas fa-flask-vial"></i> Real Clinic Photo</span>
+            <img src="images/gangamala-lab.jpg" alt="Gangamala Polyclinic Haematology, Hot Air Oven & Incubator Lab" />
+          </div>
+          <div class="facility-photo-caption">
+            <h3>Automated Haematology & Pathology Lab</h3>
+            <p>Equipped with digital Haematology cell counter, Hot Air Oven sterilization, and clinical Incubator for reliable same-day lab reporting.</p>
+          </div>
+        </div>
+
+        <div class="facility-photo-card fade-up delay-2">
+          <div class="facility-photo-wrap">
+            <span class="facility-photo-badge"><i class="fas fa-pills"></i> Real Clinic Photo</span>
+            <img src="images/gangamala-pharmacy.jpg" alt="Gangamala Polyclinic Pharmacy Counter - Aushadhi Pasal" />
+          </div>
+          <div class="facility-photo-caption">
+            <h3>In-House Pharmacy (औषधी पसल)</h3>
+            <p>Conveniently stocked dispensing counter carrying verified prescription medicines for Gynecology, Orthopedics, Dermatology, and Cardiology.</p>
+          </div>
+        </div>
+
+        <div class="facility-photo-card fade-up delay-3">
+          <div class="facility-photo-wrap">
+            <span class="facility-photo-badge"><i class="fas fa-user-doctor"></i> Specialist Care</span>
+            <img src="images/dr-db-gurung.jpg" alt="Senior Radiologist USG & Diagnostic Imaging at Gangamala Polyclinic" style="object-position: top center;" />
+          </div>
+          <div class="facility-photo-caption">
+            <h3>Senior Radiologist USG, ECG & X-Ray</h3>
+            <p>Dedicated Ultrasonography by Senior Radiologist Dr. D.B. Gurung alongside prompt 12-Lead ECG, X-Ray, and sterile Minor OT dressing care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book An Appointment Section -->
+    <section class="book-section" id="appointmentSection" style="padding: clamp(60px, 7vw, 90px) clamp(16px, 6vw, 8%); background: var(--bg-light);">
+      <div class="appointment-redesign-wrapper">
+        <div class="appointment-visual-card fade-left">
+          <img src="images/gangamala-hero.jpg" alt="Consultation at Gangamala Polyclinic Surkhet" />
+
+          <div class="appointment-visual-content">
+            <div class="appointment-rating-pill">
+              <i class="fas fa-star" style="color: #ffb703;"></i> 5.0 / 5.0 Verified Patient Rating
+            </div>
+            <h3 style="font-size: clamp(22px, 2.5vw, 28px); font-weight: 800; line-height: 1.3; margin-bottom: 12px;">
+              Reserve Your Daily OPD or 3rd Saturday Heart Clinic Token
+            </h3>
+            <p style="font-size: 14px; color: #dbeafe; line-height: 1.6; margin-bottom: 20px;">
+              Book ahead to avoid queues at Jumla Road, Birendranagar-6. Same-day USG, ECG, X-Ray, and Lab coordination available.
+            </p>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <div style="background: rgba(255,255,255,0.12); padding: 8px 14px; border-radius: 12px; font-size: 12.5px; font-weight: 600;">
+                <i class="fas fa-bolt" style="color: #7dd3fc; margin-right: 5px;"></i> Instant Token Reference
+              </div>
+              <div style="background: rgba(255,255,255,0.12); padding: 8px 14px; border-radius: 12px; font-size: 12.5px; font-weight: 600;">
+                <i class="fas fa-heart-pulse" style="color: #7dd3fc; margin-right: 5px;"></i> 3rd Sat Cardiology Pre-Booking
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="appointment-form-box fade-right">
+          <div class="side-tag" data-i18n="online_consultation">ONLINE OPD & CAMP BOOKING</div>
+          <h2 style="font-size: clamp(24px, 3vw, 32px); color: var(--primary-dark); font-weight: 800; margin-bottom: 10px;">
+            Book An <span>Appointment</span>
+          </h2>
+          <p style="color: var(--text-gray); font-size: 14.5px; margin-bottom: 20px;">
+            Select your specialist doctor or diagnostic service below. Our reception desk will confirm your visit token promptly.
+          </p>
+
+          <div style="background: #eff6ff; border-left: 4px solid #0284c7; padding: 12px 16px; border-radius: 10px; margin-bottom: 22px; font-size: 13px; color: #1e3a8a; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+            <div>
+              <strong data-i18n="immediate_emergency">Need Same-Day Token or Lab Info?</strong> Call Reception: <strong>083-520611</strong>
+            </div>
+            <a href="tel:+97783520611" style="color: #0284c7; font-weight: 800; text-decoration: none;">Call Now →</a>
+          </div>
+
+          <form onsubmit="return handleAppointmentSubmit(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <input type="text" placeholder="Patient Full Name *" required />
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Mobile / Phone Number *" required />
+              </div>
+              <div class="form-group full-width">
+                <select required>
+                  <option value="" disabled selected data-i18n="select_department">Select Specialty / Doctor *</option>
+                  <option>Gynecology & Women's Health — Dr. Kritika Thapa (Daily OPD)</option>
+                  <option>Orthopedics & Spine Care — Dr. Tejendra Saud (Daily OPD)</option>
+                  <option>Dermatology & Skin Care — Dr. Susmita Pradhan (Daily OPD)</option>
+                  <option>Senior Cardiology (3rd Saturday B.S.) — Dr. Amrit Bogati</option>
+                  <option>Ultrasonography (USG) — Senior Radiologist Dr. D.B. Gurung</option>
+                  <option>Pathology Lab / ECG / Digital X-Ray</option>
+                  <option>Dressing & Minor OT Service</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="date" required /></div>
+              <div class="form-group">
+                <select>
+                  <option data-i18n="preferred_time">Preferred Slot</option>
+                  <option>Morning OPD (7:30 AM – 11:00 AM)</option>
+                  <option>Midday Diagnostics / USG (11:00 AM – 2:00 PM)</option>
+                  <option>Afternoon / Evening OPD (3:00 PM – 7:00 PM)</option>
+                  <option>3rd Saturday Monthly Cardiology Camp</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <input type="text" placeholder="Symptoms, Follow-Up Note, or Tests Needed (Optional)" />
+              </div>
+            </div>
+            <button type="submit" class="btn-submit" style="width: 100%; justify-content: center; font-size: 15.5px; padding: 16px; margin-top: 10px;">
+              Confirm Appointment Request <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section" style="padding: clamp(60px, 7vw, 90px) clamp(16px, 6vw, 8%); background: var(--white);">
+      <div class="wcu-redesign-wrapper">
+        <div class="wcu-image-frame fade-left">
+          <img src="images/gangamala-pharmacy.jpg" alt="Gangamala Polyclinic Pharmacy and Patient Care Desk" />
+
+          <div class="wcu-floating-badge-top">
+            <i class="fas fa-star" style="color: #ffb703; font-size: 18px;"></i>
+            <span>5.0★ Rated Medical & Skin Care Center</span>
+          </div>
+
+          <div class="wcu-floating-badge-bottom">
+            <div class="wcu-badge-icon">
+              <i class="fas fa-shield-heart"></i>
+            </div>
+            <div>
+              <strong style="color: var(--primary-dark); font-size: 15px; display: block;">Complete One-Stop Polyclinic</strong>
+              <span style="color: var(--text-gray); font-size: 13px;">Specialist doctors, USG, ECG, X-Ray, Haematology lab, Minor OT & Pharmacy on Jumla Road.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wcu-right fade-right">
+          <div class="section-header dark" style="margin-bottom: 25px;">
+            <h4><i class="fas fa-shield-heart"></i> WHY CHOOSE GANGAMALA</h4>
+            <h2 data-i18n="why_title">Trusted Multi-Specialty Care in Birendranagar</h2>
+            <p style="color: #cbd5e1; font-size: 14.5px; margin-top: 8px;">
+              Bringing experienced specialists and complete diagnostic clarity to families across Surkhet and Karnali Province.
+            </p>
+          </div>
+
+          <div class="wcu-grid">
+            <div class="wcu-card delay-1">
+              <div class="wcu-watermark">01</div>
+              <i class="fas fa-user-md main-icon"></i>
+              <h3 data-i18n="senior_physicians">Daily Specialist Doctors</h3>
+              <p>Regular daily OPD by qualified Gynecologist, Orthopedician, and Dermatologist-Venereologist.</p>
+            </div>
+            <div class="wcu-card delay-2">
+              <div class="wcu-watermark">02</div>
+              <i class="fa-solid fa-heart-pulse main-icon"></i>
+              <h3 data-i18n="patient_centric_approach">Shahid Gangalal Heart Clinic</h3>
+              <p>Dr. Amrit Bogati visits regularly every 3rd Saturday of the Nepali B.S. month for cardiac care.</p>
+            </div>
+            <div class="wcu-card delay-3">
+              <div class="wcu-watermark">03</div>
+              <i class="fas fa-microscope main-icon"></i>
+              <h3 data-i18n="direct_access">Complete On-Site Diagnostics</h3>
+              <p>Senior Radiologist USG (Dr. D.B. Gurung), digital X-Ray, ECG, and automated Haematology lab.</p>
+            </div>
+            <div class="wcu-card delay-4">
+              <div class="wcu-watermark">04</div>
+              <i class="fas fa-pills main-icon"></i>
+              <h3 data-i18n="pharmacy_24h_labs">Pharmacy & Minor OT</h3>
+              <p>Clean sterile dressing, Minor OT procedures, and verified medicines at our in-house औषधी पसल.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patient Stories Preview Section -->
+    <section class="testimonials-section" style="background: var(--bg-light); padding: clamp(60px, 7vw, 90px) clamp(16px, 6vw, 8%);">
+      <div class="section-header center fade-up">
+        <h4><i class="fas fa-heart"></i> PATIENT VOICES</h4>
+        <h2>Patient Stories & Verified Reviews</h2>
+        <p style="color: var(--text-gray); font-size: 15px; margin-top: 8px">
+          Click any card to read how families across Surkhet and Karnali experience care at Gangamala Polyclinic.
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="patient-story-card carousel-item clickable-card fade-up delay-1" onclick="openStoryModal(0)">
+            <p class="patient-story-content">"Very nice service! Clean facility, courteous staff, and smooth coordination between specialist consultation, laboratory testing, and the in-house pharmacy."</p>
+            <div class="patient-story-author">
+              <div class="patient-story-avatar"><i class="fas fa-star"></i></div>
+              <div class="patient-story-info">
+                <h4>Bharat Devkota (5.0★)</h4>
+                <span>Birendranagar, Surkhet · OPD & Lab</span>
+              </div>
+            </div>
+            <span class="card-read-hint">Read Full Story <i class="fas fa-arrow-right"></i></span>
+          </div>
+
+          <div class="patient-story-card carousel-item clickable-card fade-up delay-2" onclick="openStoryModal(1)">
+            <p class="patient-story-content">"Dr. Kritika Thapa listened patiently throughout my pregnancy. Having Dr. D.B. Gurung's USG and blood tests right downstairs made every visit stress-free."</p>
+            <div class="patient-story-author">
+              <div class="patient-story-avatar"><i class="fas fa-user"></i></div>
+              <div class="patient-story-info">
+                <h4>Kamala Bhandari (29 yrs)</h4>
+                <span>Birendranagar-6 · Gynecology & USG</span>
+              </div>
+            </div>
+            <span class="card-read-hint">Read Full Story <i class="fas fa-arrow-right"></i></span>
+          </div>
+
+          <div class="patient-story-card carousel-item clickable-card fade-up delay-3" onclick="openStoryModal(2)">
+            <p class="patient-story-content">"Consulting Dr. Amrit Bogati from Shahid Gangalal Heart Centre on the 3rd Saturday right in Surkhet saved our family costly trips to Kathmandu."</p>
+            <div class="patient-story-author">
+              <div class="patient-story-avatar"><i class="fas fa-user"></i></div>
+              <div class="patient-story-info">
+                <h4>Hari Bahadur Shahi (58 yrs)</h4>
+                <span>Narayan, Dailekh · Cardiology & ECG</span>
+              </div>
+            </div>
+            <span class="card-read-hint">Read Full Story <i class="fas fa-arrow-right"></i></span>
+          </div>
+
+          <div class="patient-story-card carousel-item clickable-card fade-up delay-4" onclick="openStoryModal(4)">
+            <p class="patient-story-content">"Over-the-counter creams had damaged my skin for months. Dr. Susmita Pradhan identified the exact issue on my first visit and restored my skin completely."</p>
+            <div class="patient-story-author">
+              <div class="patient-story-avatar"><i class="fas fa-user"></i></div>
+              <div class="patient-story-info">
+                <h4>Srijana Pun (25 yrs)</h4>
+                <span>Birendranagar-4 · Skin Care Clinic</span>
+              </div>
+            </div>
+            <span class="card-read-hint">Read Full Story <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;" class="fade-up">
+        <a href="patient-stories.html" class="btn-primary">View All Patient Stories <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="testimonials-section" style="padding: clamp(60px, 7vw, 90px) clamp(16px, 6vw, 8%);">
+      <div class="faq-redesign-wrapper">
+        <div class="faq-image-container fade-left">
+          <img src="images/gangamala-lab.jpg" alt="Gangamala Polyclinic Diagnostic Desk Surkhet" />
+
+          <div class="faq-live-status">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+              <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #0284c7; text-transform: uppercase;">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #0284c7; display: inline-block;"></span> Reception Desk Open
+              </span>
+              <span style="font-size: 12px; color: var(--text-gray);">Jumla Road, Surkhet</span>
+            </div>
+            <div style="font-size: 14.5px; font-weight: 700; color: var(--primary-dark); margin-bottom: 6px;">
+              OPD Tokens, USG & 3rd Saturday Heart Camp
+            </div>
+            <div style="font-size: 13px; color: var(--text-gray);">
+              Call Reception: <strong>+977 83-520611</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-right fade-right">
+          <div class="section-header dark">
+            <h4><i class="fa-solid fa-question-circle"></i> PATIENT ASSISTANCE</h4>
+            <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+            <p style="color: #cbd5e1; font-size: 14.5px; margin-top: 8px">
+              Helpful answers about our daily specialists, monthly Cardiology clinic, diagnostics, and location in Birendranagar.
+            </p>
+          </div>
+
+          <details class="faq-card-item" open>
+            <summary>When is Senior Cardiologist Dr. Amrit Bogati available?</summary>
+            <p>
+              Dr. Amrit Bogati (Senior Cardiologist, Shahid Gangalal National Heart Centre, Kathmandu) visits Gangamala Polyclinic regularly on every <strong>3rd Saturday of the Nepali B.S. month</strong>. Because tokens fill fast, please call <strong>083-520611</strong> or book online in advance.
+            </p>
+          </details>
+
+          <details class="faq-card-item">
+            <summary>Which specialist doctors are available in Daily OPD?</summary>
+            <p>
+              We provide daily OPD consultations from <strong>Dr. Kritika Thapa</strong> (Gynecologist), <strong>Dr. Tejendra Saud</strong> (Orthopedician), and <strong>Dr. Susmita Pradhan</strong> (Dermatologist & Venereologist), supported by Senior Radiologist <strong>Dr. D.B. Gurung</strong> for USG scans.
+            </p>
+          </details>
+
+          <details class="faq-card-item">
+            <summary>What diagnostic tests and procedures can be done on-site?</summary>
+            <p>
+              We offer a well-equipped Pathology & Haematology laboratory, Ultrasonography (USG), 12-Lead ECG, Digital X-Ray, sterile Dressing & Minor OT, and an in-house Pharmacy (औषधी पसल).
+            </p>
+          </details>
+
+          <details class="faq-card-item">
+            <summary>Where is Gangamala Polyclinic Pvt. Ltd. located?</summary>
+            <p>
+              We are conveniently located on <strong>Jumla Road, Birendranagar-6, Surkhet</strong>, Karnali Province, Nepal—easily reachable from across Birendranagar and surrounding districts.
+            </p>
+          </details>
+
+          <div style="margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" class="btn-primary" style="background: #1877f2; color: #fff; box-shadow: 0 8px 18px rgba(24, 119, 242, 0.3);">
+              <i class="fab fa-facebook-f"></i> Message Us on Facebook
+            </a>
+            <a href="tel:+97783520611" class="btn-primary">
+              <i class="fas fa-phone-alt"></i> Call 083-520611
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Health Blog Section -->
+    <section class="services-section" style="padding: clamp(60px, 7vw, 90px) clamp(16px, 6vw, 8%);">
+      <div class="section-header center fade-up">
+        <h4><i class="fas fa-newspaper"></i> CLINICAL GUIDES & UPDATES</h4>
+        <h2>Health Blog & Clinic Notices</h2>
+        <p style="color: var(--text-gray); font-size: 15px; margin-top: 8px">
+          Click any article card to read specialist advice from Gangamala Polyclinic's medical team.
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="blog-card carousel-item clickable-card fade-up delay-1" onclick="openBlogModal(0)">
+            <div class="blog-img-wrapper">
+              <span class="blog-category">Cardiology</span>
+              <img src="images/dr-amrit-bogati.jpg" alt="Senior Cardiology Clinic Preparation" style="object-position: top center;" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="fas fa-calendar-alt"></i> Nov 15, 2026</span>
+                <span><i class="fas fa-user-md"></i> Dr. Amrit Bogati</span>
+              </div>
+              <h3 class="blog-title"><a href="javascript:void(0)">Preparing for Your Monthly Senior Cardiologist Visit in Surkhet</a></h3>
+              <p class="blog-excerpt">How to prepare your BP log, ECG, and blood reports ahead of our 3rd Saturday heart clinic at Gangamala Polyclinic.</p>
+              <span class="card-read-hint">Read Full Article <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="blog-card carousel-item clickable-card fade-up delay-2" onclick="openBlogModal(1)">
+            <div class="blog-img-wrapper">
+              <span class="blog-category">Gynecology</span>
+              <img src="images/gangamala-hero.jpg" alt="Antenatal Checkups and Ultrasound Guide" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="fas fa-calendar-alt"></i> Nov 08, 2026</span>
+                <span><i class="fas fa-user-md"></i> Dr. Kritika Thapa</span>
+              </div>
+              <h3 class="blog-title"><a href="javascript:void(0)">Essential Antenatal Checkups & Ultrasound Milestones</a></h3>
+              <p class="blog-excerpt">A trimester-by-trimester guide to prenatal checkups, blood tests, and USG scans for expectant mothers in Karnali.</p>
+              <span class="card-read-hint">Read Full Article <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="blog-card carousel-item clickable-card fade-up delay-3" onclick="openBlogModal(2)">
+            <div class="blog-img-wrapper">
+              <span class="blog-category">Dermatology</span>
+              <img src="images/dr-susmita-pradhan.jpg" alt="Safe Skin Care and Fungal Allergy Guide" style="object-position: top center;" loading="lazy" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="fas fa-calendar-alt"></i> Oct 29, 2026</span>
+                <span><i class="fas fa-user-md"></i> Dr. Susmita Pradhan</span>
+              </div>
+              <h3 class="blog-title"><a href="javascript:void(0)">Managing Skin Allergies, Melasma & Fungal Infections Safely</a></h3>
+              <p class="blog-excerpt">Why unprescribed steroid creams worsen rashes and pigmentation—and what dermatologist-guided care looks like.</p>
+              <span class="card-read-hint">Read Full Article <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px;" class="fade-up">
+        <a href="blog.html" class="btn-primary">View All Health Articles <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Find Our Facility & Interactive Google Map -->
+    <section style="padding: clamp(60px, 7vw, 90px) clamp(16px, 6vw, 8%); background: var(--bg-light);">
+      <div class="section-header center fade-up" style="margin-bottom: 40px;">
+        <h4><i class="fas fa-map-marker-alt"></i> VISIT OUR POLYCLINIC</h4>
+        <h2>Jumla Road, Birendranagar-6, Surkhet</h2>
+        <p style="color: var(--text-gray); font-size: 15px; margin-top: 8px">
+          Centrally located on Jumla Road in Birendranagar, Surkhet — convenient for daily OPD visits, diagnostics, and pharmacy needs.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 40px; width: 100%;">
+        <div class="fade-up delay-1" style="background: var(--white); padding: 26px 22px; border-radius: 20px; box-shadow: var(--shadow-card); border: 1px solid #dbeafe;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(13, 148, 136, 0.1); color: var(--primary-cyan); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px;">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3 style="font-size: 17px; color: var(--primary-dark); font-weight: 700; margin-bottom: 6px;">Clinic Address</h3>
+          <p style="font-size: 13.5px; color: var(--text-gray); line-height: 1.6; margin-bottom: 8px;">
+            Gangamala Polyclinic Pvt. Ltd., Jumla Road, Birendranagar-6, Surkhet, Nepal
+          </p>
+          <span style="font-size: 12px; font-weight: 700; color: var(--primary-cyan);">वीरेन्द्रनगर न.पा.-६, जुम्ला रोड, सुर्खेत</span>
+        </div>
+
+        <div class="fade-up delay-2" style="background: var(--white); padding: 26px 22px; border-radius: 20px; box-shadow: var(--shadow-card); border: 1px solid #dbeafe;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(13, 148, 136, 0.1); color: var(--primary-cyan); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px;">
+            <i class="fas fa-phone-volume"></i>
+          </div>
+          <h3 style="font-size: 17px; color: var(--primary-dark); font-weight: 700; margin-bottom: 6px;">Reception & OPD Desk</h3>
+          <p style="font-size: 13.5px; color: var(--text-gray); line-height: 1.6; margin-bottom: 8px;">
+            Daily specialist appointments, USG/Lab inquiries, and 3rd Saturday Heart Camp tokens.
+          </p>
+          <a href="tel:+97783520611" style="font-size: 15px; font-weight: 800; color: var(--primary-cyan); text-decoration: none;">+977 83-520611</a>
+        </div>
+
+        <div class="fade-up delay-3" style="background: var(--white); padding: 26px 22px; border-radius: 20px; box-shadow: var(--shadow-card); border: 1px solid #dbeafe;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(220, 38, 38, 0.1); color: #dc2626; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px;">
+            <i class="fas fa-heart-pulse"></i>
+          </div>
+          <h3 style="font-size: 17px; color: var(--primary-dark); font-weight: 700; margin-bottom: 6px;">Monthly Heart Clinic</h3>
+          <p style="font-size: 13.5px; color: var(--text-gray); line-height: 1.6; margin-bottom: 8px;">
+            Dr. Amrit Bogati (Shahid Gangalal National Heart Centre, Kathmandu).
+          </p>
+          <span style="font-size: 13px; font-weight: 700; color: #dc2626;">Every 3rd Saturday (B.S.)</span>
+        </div>
+
+        <div class="fade-up delay-4" style="background: var(--white); padding: 26px 22px; border-radius: 20px; box-shadow: var(--shadow-card); border: 1px solid #dbeafe;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); color: #1877f2; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px;">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <h3 style="font-size: 17px; color: var(--primary-dark); font-weight: 700; margin-bottom: 6px;">Official Facebook Page</h3>
+          <p style="font-size: 13.5px; color: var(--text-gray); line-height: 1.6; margin-bottom: 8px;">
+            Follow specialist camp schedules, health notices, and updates directly on Facebook.
+          </p>
+          <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 700; color: #1877f2; text-decoration: none;">@ganagamala.polyclinic.surkhet →</a>
+        </div>
+      </div>
+
+      <div class="fade-up" style="width: 100%; border-radius: 24px; overflow: hidden; height: clamp(350px, 45vw, 480px); box-shadow: 0 15px 40px rgba(11, 37, 69, 0.08); border: 1px solid #dbeafe;">
+        <iframe
+          src="https://maps.google.com/maps?q=Gangamala%20Polyclinic%20Jumla%20Road%20Birendranagar%20Surkhet%20Nepal&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          title="Gangamala Polyclinic Pvt. Ltd. Location Map — Jumla Road, Birendranagar, Surkhet"
+          style="width: 100%; height: 100%; border: 0;"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer" style="padding-top: 65px;">
+      <div class="footer-grid">
+        <div class="footer-widget fade-up delay-1">
+          <a href="index.html" class="logo" style="color: #fff; text-decoration: none; margin-bottom: 16px; display: inline-flex;">
+            <img src="images/gangamala-logo.png" alt="Gangamala Polyclinic Logo" class="brand-logo-img" />
+          </a>
+          <p style="color: #cbd5e1; font-size: 13.5px; line-height: 1.7; margin-bottom: 20px;">
+            Established in 2073 B.S. (Reg. No. 159951), Gangamala Polyclinic Pvt. Ltd. provides daily specialist OPD care, clinical dermatology, monthly Senior Cardiology visits, USG, ECG, X-Ray, Haematology lab, Minor OT, and pharmacy services on Jumla Road, Surkhet.
+          </p>
+          <div class="footer-social" style="margin-top: 0; display: flex; gap: 10px;">
+            <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" aria-label="Gangamala Polyclinic Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+97783520611" aria-label="Call Gangamala Polyclinic"><i class="fas fa-phone-alt"></i></a>
+            <a href="appointment.html" aria-label="Book Appointment"><i class="fa-regular fa-calendar-check"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-widget fade-up delay-2">
+          <h3>Core Specialties</h3>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Gynecology & Women’s Health</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Orthopedics & Spine Care</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Dermatology & Skin Care Clinic</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Senior Cardiology (3rd Sat) & ECG</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> USG, X-Ray, Lab & Minor OT</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget fade-up delay-3">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Polyclinic</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Clinical Services</a></li>
+            <li><a href="doctors.html"><i class="fa-solid fa-angle-right"></i> Specialist Doctors</a></li>
+            <li><a href="packages.html"><i class="fa-solid fa-angle-right"></i> Health Checkup Packages</a></li>
+            <li><a href="patient-stories.html"><i class="fa-solid fa-angle-right"></i> Patient Stories</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Health Blog</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact & Map</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget fade-up delay-4">
+          <h3>Clinic Inquiries</h3>
+          <div class="footer-contact-info">
+            <div class="contact-row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span>Clinic Address</span>
+                <strong>Jumla Road, Birendranagar-6, Surkhet</strong>
+              </div>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-phone-volume"></i>
+              <div>
+                <span>Reception & Token Desk</span>
+                <strong>+977 83-520611</strong>
+              </div>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-heart-pulse"></i>
+              <div>
+                <span>Visiting Heart Specialist</span>
+                <strong>Every 3rd Saturday (Nepali B.S.)</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom fade-up" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; padding-top: 25px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13.5px;">
+        <div class="copyright">
+          © 2026 <span>Gangamala Polyclinic Pvt. Ltd. (गंगामाला पोलिक्लिनिक प्रा. लि.)</span> · Surkhet, Nepal.
+        </div>
+        <div class="designer-credit" style="color: #cbd5e1;">
+          Jumla Road, Birendranagar-6 · <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" style="color: #7dd3fc; font-weight: 700; text-decoration: none;">Facebook Page</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/scripts.js?v=3"></script>
+
+    <!-- Floating Facebook, Call & Scroll To Top Actions -->
+    <div class="floating-actions-container">
+      <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" class="whatsapp-floating-btn" style="background: #1877f2; box-shadow: 0 10px 25px rgba(24, 119, 242, 0.35);" aria-label="Gangamala Polyclinic Facebook" title="Message on Facebook">
+        <i class="fab fa-facebook-f"></i>
+        <span class="whatsapp-floating-tooltip">Gangamala Facebook</span>
+      </a>
+      <button id="scrollToTopBtn" class="scroll-to-top-btn" onclick="scrollToTop()" aria-label="Scroll to top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </body>
+</html>

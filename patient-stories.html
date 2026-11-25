@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <link rel="icon" type="image/png" href="images/gangamala-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
+    <title>Patient Stories & Reviews | Gangamala Polyclinic Surkhet</title>
+    <meta name="description" content="Read patient experiences and 5.0-star reviews from families across Birendranagar, Surkhet, and Karnali Province." />
+    <link rel="stylesheet" href="css/styles.css?v=3" />
+    <script>
+      (function () {
+        var t = localStorage.getItem('gm_theme');
+        if (t === 'dark' || (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.classList.add('theme-dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="preloader">
+      <img src="images/gangamala-logo.png" alt="Gangamala Polyclinic" style="width: 74px; height: 74px; border-radius: 50%; margin-bottom: 14px; box-shadow: 0 8px 24px rgba(30, 58, 138, 0.28);" />
+      <div class="preloader-spinner"></div>
+    </div>
+    <script>
+      (function () {
+        function dismiss() {
+          var p = document.getElementById('preloader');
+          if (p) {
+            p.style.opacity = '0';
+            p.style.pointerEvents = 'none';
+            p.style.visibility = 'hidden';
+            document.body.classList.add('loaded');
+            setTimeout(function () { if (p && p.parentNode) p.style.display = 'none'; }, 400);
+          }
+        }
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+          setTimeout(dismiss, 100);
+        } else {
+          document.addEventListener('DOMContentLoaded', function () { setTimeout(dismiss, 150); });
+          window.addEventListener('load', dismiss);
+        }
+        setTimeout(dismiss, 800);
+      })();
+    </script>
+
+    <!-- Top Bar -->
+    <div class="top-hospital-bar">
+      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap">
+        <span><i class="fas fa-map-marker-alt" style="color: var(--primary-cyan); margin-right: 5px"></i> Jumla Road, Birendranagar-6, Surkhet · Karnali Province</span>
+        <span><i class="fas fa-clock" style="color: var(--primary-cyan); margin-right: 5px"></i> Daily Specialist OPD · Lab, USG, ECG & X-Ray</span>
+      </div>
+      <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap">
+        <a href="index.html#cardiologyCamp" class="top-bar-emergency" style="text-decoration: none;"><i class="fas fa-heart-pulse"></i> 3rd Sat Senior Cardiologist</a>
+        <a href="tel:+97783520611"><i class="fas fa-phone-alt" style="color: var(--primary-cyan); margin-right: 4px"></i> Reception: 083-520611</a>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header id="mainHeader">
+      <a href="index.html" class="logo" aria-label="Gangamala Polyclinic Pvt. Ltd.">
+        <img src="images/gangamala-logo.png" alt="Gangamala Polyclinic Logo" class="brand-logo-img" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="home">Home</a></li>
+        <li><a href="about.html" data-i18n="about">About</a></li>
+        <li><a href="services.html" data-i18n="services">Services</a></li>
+        <li><a href="doctors.html" data-i18n="doctors">Doctors</a></li>
+        <li><a href="patient-stories.html" class="active" data-i18n="patient_stories">Patient Stories</a></li>
+        <li><a href="blog.html" data-i18n="blog">Health Blog</a></li>
+        <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="tel:+97783520611" class="header-icon" title="Call Reception 083-520611"><i class="fas fa-phone-volume"></i></a>
+        <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <div class="lang-dropdown">
+          <button class="lang-toggle" onclick="toggleLangDropdown(event)">
+            <i class="fas fa-globe"></i>
+            <span class="lang-label">EN</span>
+            <i class="fas fa-chevron-down lang-chevron"></i>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" class="lang-option active" data-lang="en" onclick="switchLang('en', event)"><span class="lang-flag">🇳🇵</span> English</a>
+            <a href="#" class="lang-option" data-lang="ne" onclick="switchLang('ne', event)"><span class="lang-flag">🇳🇵</span> नेपाली</a>
+          </div>
+        </div>
+        <a href="appointment.html" class="btn-appointment"><i class="fa-regular fa-calendar-check"></i> <span data-i18n="book_consultation">Book OPD</span></a>
+        <i class="fas fa-bars btn-menu-mobile" onclick="toggleMobileNav()"></i>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer-scrim" id="mobileScrim" onclick="toggleMobileNav(false)"></div>
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <div>
+        <div class="mobile-drawer-header">
+          <a href="index.html" class="logo" aria-label="Gangamala Polyclinic Pvt. Ltd.">
+            <img src="images/gangamala-logo.png" alt="Gangamala Polyclinic Logo" class="brand-logo-img" />
+          </a>
+          <button class="mobile-drawer-close" onclick="toggleMobileNav(false)" aria-label="Close Navigation Menu"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-settings-bar">
+          <div class="mobile-lang-switcher">
+            <button class="mobile-lang-btn active" data-lang="en" onclick="switchLang('en', event)"><span class="flag">🇳🇵</span> English</button>
+            <button class="mobile-lang-btn" data-lang="ne" onclick="switchLang('ne', event)"><span class="flag">🇳🇵</span> नेपाली</button>
+          </div>
+          <button class="theme-toggle-btn mobile-theme-btn" onclick="toggleTheme()" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="nav-link-item" data-i18n="home"><i class="fas fa-house"></i> Home</a></li>
+          <li><a href="about.html" class="nav-link-item" data-i18n="about_hospital"><i class="fas fa-hospital-user"></i> About Polyclinic</a></li>
+          <li><a href="services.html" class="nav-link-item" data-i18n="clinical_services"><i class="fas fa-stethoscope"></i> Specialties & Services</a></li>
+          <li><a href="doctors.html" class="nav-link-item" data-i18n="doctors_opd"><i class="fas fa-user-md"></i> Specialist Doctors</a></li>
+          <li><a href="patient-stories.html" class="nav-link-item active" data-i18n="patient_stories"><i class="fas fa-heart-pulse"></i> Patient Stories</a></li>
+          <li><a href="blog.html" class="nav-link-item" data-i18n="blog"><i class="fas fa-newspaper"></i> Health Blog</a></li>
+          <li><a href="contact.html" class="nav-link-item" data-i18n="contact_location"><i class="fas fa-map-location-dot"></i> Contact & Location</a></li>
+        </ul>
+      </div>
+      <div class="mobile-drawer-footer">
+        <a href="appointment.html" class="btn-appointment" style="width: 100%; justify-content: center; margin-bottom: 8px;"><i class="fa-regular fa-calendar-check"></i> Book OPD / Heart Clinic</a>
+        <a href="tel:+97783520611" class="mobile-call-btn"><i class="fas fa-phone-volume"></i> Reception: <strong>+977 83-520611</strong></a>
+        <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" class="mobile-whatsapp-btn" style="background: #1877f2;"><i class="fab fa-facebook-f"></i> Follow on Facebook</a>
+      </div>
+    </div>
+
+
+    <section class="page-banner-hero">
+      <h4><i class="fas fa-heart" style="color: var(--primary-cyan); margin-right: 6px"></i> PATIENT EXPERIENCES</h4>
+      <h1 data-i18n="patient_stories_title">Patient Stories & Reviews</h1>
+      <div class="page-banner-breadcrumbs"><a href="index.html">Home</a> <span>/</span> <span>Patient Stories</span></div>
+    </section>
+
+    <section style="padding: clamp(60px, 7vw, 90px) clamp(16px, 6vw, 8%); background: var(--bg-light);">
+      <div class="page-with-sidebar">
+        <div class="main-content">
+          <div class="section-header" style="margin-bottom: 30px">
+            <h4><i class="fas fa-heart-pulse"></i> VOICES FROM SURKHET & KARNALI</h4>
+            <h2>How Our Patients Experience Care at Gangamala</h2>
+            <p style="color: var(--text-gray); font-size: 15px; margin-top: 6px">Click any story card to read the full patient journey.</p>
+          </div>
+          <div class="two-column-grid" id="storiesGrid"></div>
+          <div class="pagination fade-up" id="paginationControls"></div>
+        </div>
+
+        <aside class="sidebar fade-up">
+          <div class="sidebar-widget">
+            <h3>Filter by Specialty</h3>
+            <ul class="sidebar-list">
+              <li><a href="javascript:void(0)" onclick="filterStoryDept('All')"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> All Stories (6)</a></li>
+              <li><a href="javascript:void(0)" onclick="filterStoryDept('Gynecology')"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Gynecology & USG (1)</a></li>
+              <li><a href="javascript:void(0)" onclick="filterStoryDept('Cardiology')"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Cardiology & ECG (1)</a></li>
+              <li><a href="javascript:void(0)" onclick="filterStoryDept('Orthopedics')"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Orthopedics & X-Ray (1)</a></li>
+              <li><a href="javascript:void(0)" onclick="filterStoryDept('Dermatology')"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Dermatology & Skin Care (1)</a></li>
+              <li><a href="javascript:void(0)" onclick="filterStoryDept('Radiology')"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Radiology & Lab (1)</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+            <h3>Book Your Visit</h3>
+            <p style="color: var(--text-gray); font-size: 14px; margin-bottom: 15px;">Experience attentive specialist consultations and complete diagnostics on Jumla Road.</p>
+            <a href="appointment.html" class="btn-primary" style="width: 100%; justify-content: center;"><i class="fa-regular fa-calendar-check"></i> Book OPD Slot</a>
+          </div>
+          <div class="sidebar-widget">
+            <h3>Clinic Contact</h3>
+            <ul class="sidebar-list" style="font-size: 13.5px;">
+              <li><i class="fas fa-phone-alt" style="color: var(--primary-cyan); margin-right: 8px;"></i> +977 83-520611</li>
+              <li><i class="fas fa-map-marker-alt" style="color: var(--primary-cyan); margin-right: 8px;"></i> Jumla Road, Birendranagar-6</li>
+              <li><i class="fab fa-facebook-f" style="color: #1877f2; margin-right: 8px;"></i> ganagamala.polyclinic.surkhet</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="main-footer" style="padding-top: 65px;">
+      <div class="footer-grid">
+        <div class="footer-widget fade-up delay-1">
+          <a href="index.html" class="logo" style="color: #fff; text-decoration: none; margin-bottom: 16px; display: inline-flex;">
+            <img src="images/gangamala-logo.png" alt="Gangamala Polyclinic Logo" class="brand-logo-img" />
+          </a>
+          <p style="color: #cbd5e1; font-size: 13.5px; line-height: 1.7; margin-bottom: 20px;">
+            Established in 2073 B.S. (Reg. No. 159951), Gangamala Polyclinic Pvt. Ltd. provides daily specialist OPD care, clinical dermatology, monthly Senior Cardiology visits, USG, ECG, X-Ray, Haematology lab, Minor OT, and pharmacy services on Jumla Road, Surkhet.
+          </p>
+          <div class="footer-social" style="margin-top: 0; display: flex; gap: 10px;">
+            <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" aria-label="Gangamala Polyclinic Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+97783520611" aria-label="Call Gangamala Polyclinic"><i class="fas fa-phone-alt"></i></a>
+            <a href="appointment.html" aria-label="Book Appointment"><i class="fa-regular fa-calendar-check"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-widget fade-up delay-2">
+          <h3>Core Specialties</h3>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Gynecology & Women’s Health</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Orthopedics & Spine Care</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Dermatology & Skin Care Clinic</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Senior Cardiology (3rd Sat) & ECG</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> USG, X-Ray, Lab & Minor OT</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget fade-up delay-3">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> About Polyclinic</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Clinical Services</a></li>
+            <li><a href="doctors.html"><i class="fa-solid fa-angle-right"></i> Specialist Doctors</a></li>
+            <li><a href="packages.html"><i class="fa-solid fa-angle-right"></i> Health Checkup Packages</a></li>
+            <li><a href="patient-stories.html"><i class="fa-solid fa-angle-right"></i> Patient Stories</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Health Blog</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact & Map</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-widget fade-up delay-4">
+          <h3>Clinic Inquiries</h3>
+          <div class="footer-contact-info">
+            <div class="contact-row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div><span>Clinic Address</span><strong>Jumla Road, Birendranagar-6, Surkhet</strong></div>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-phone-volume"></i>
+              <div><span>Reception & Token Desk</span><strong>+977 83-520611</strong></div>
+            </div>
+            <div class="contact-row">
+              <i class="fas fa-heart-pulse"></i>
+              <div><span>Visiting Heart Specialist</span><strong>Every 3rd Saturday (Nepali B.S.)</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom fade-up" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; padding-top: 25px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13.5px;">
+        <div class="copyright">© 2026 <span>Gangamala Polyclinic Pvt. Ltd. (गंगामाला पोलिक्लिनिक प्रा. लि.)</span> · Surkhet, Nepal.</div>
+        <div class="designer-credit" style="color: #cbd5e1;">Jumla Road, Birendranagar-6 · <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" style="color: #7dd3fc; font-weight: 700; text-decoration: none;">Facebook Page</a></div>
+      </div>
+    </footer>
+
+    <script src="js/scripts.js?v=3"></script>
+    <div class="floating-actions-container">
+      <a href="https://www.facebook.com/ganagamala.polyclinic.surkhet/" target="_blank" rel="noopener" class="whatsapp-floating-btn" style="background: #1877f2; box-shadow: 0 10px 25px rgba(24, 119, 242, 0.35);" aria-label="Gangamala Polyclinic Facebook" title="Message on Facebook">
+        <i class="fab fa-facebook-f"></i>
+        <span class="whatsapp-floating-tooltip">Gangamala Facebook</span>
+      </a>
+      <button id="scrollToTopBtn" class="scroll-to-top-btn" onclick="scrollToTop()" aria-label="Scroll to top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </body>
+</html>
